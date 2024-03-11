@@ -1,14 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans;
-}
+
 
 .container {
     width: 670px;
     height: 830px;
-    margin: auto;
+    margin: 50px auto;
     margin-top: 75px;
     border-radius: 15px;
     background-image: linear-gradient(180deg, #130754 0%, #3b2f80 100%);
