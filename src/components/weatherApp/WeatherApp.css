@@ -3,8 +3,7 @@
 .container {
     width: 670px;
     height: 830px;
-    margin: 50px auto;
-    margin-top: 75px;
+    margin: 75px auto;
     border-radius: 15px;
     background-image: linear-gradient(180deg, #130754 0%, #3b2f80 100%);
 }
@@ -86,4 +85,48 @@
 
 .icon{
     margin-top: 10px;
+}
+
+@media(max-width : 767.98px) {
+    .container{
+        width: 75%;
+        height: 500px;
+    }
+    .topBar {
+        padding: 25px 10px 0;
+    }
+    .topBar .city {
+        width: 100%;
+        height: 50px;
+        padding-left: 25px;
+        font-size: 14px;
+    }
+    .searchIconContainer {
+        width: 22%;
+        height: 50px;
+    }
+    .weatherImages {
+        height: 100px;
+    }
+    .temperature {
+        font-size: 80px;
+    }
+    .location {
+        font-size: 44px;
+    }
+    .weatherData {
+        font-size: 24px;
+    }
+    .icon {
+        width: 35px;
+    }
+    .text {
+        font-size: 18px;
+    }
+}
+
+@media(max-width : 575.98px){
+    .container{
+        width: 100%;
+    }
 }
