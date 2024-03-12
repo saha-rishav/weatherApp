@@ -1,5 +1,4 @@
 
-
 .container {
     width: 600px;
     height: 700px;
@@ -59,6 +58,7 @@
     justify-content: center;
     color: #ffff;
     font-size: 58px;
+    font-family: sans-serif !important;
 }
 
 

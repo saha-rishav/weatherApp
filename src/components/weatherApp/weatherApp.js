@@ -22,10 +22,16 @@ const WeatherApp = () => {
                 return false;
             }
 
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${element[0].value}&units=Metric&appid=${api_key}`
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${element[0].value.trim()}&units=Metric&appid=${api_key}`
 
             const res = await fetch(url);
             const data = await res.json();
+
+            console.log(element[0].value.trim())
+            if (data && data.cod === "404") {
+                console.log(data); 
+                alert(data?.message)
+            }
 
             if (data && data.length !== 0 && data?.cod !== "404") {
 
@@ -37,6 +43,7 @@ const WeatherApp = () => {
                 if (humidity[0]) {
                     humidity[0].innerHTML = data.main.humidity + " %";
                 }
+
                 windyRate[0].innerHTML = Math.floor(data.wind.speed) + " km/h";
                 temperature[0].innerHTML = Math.floor(data.main.temp) + "&deg;C";
                 location[0].innerHTML = data.name;
@@ -59,14 +66,8 @@ const WeatherApp = () => {
                     setWeatherIcon(ClearIcon)
                 }
             }
-
-            if (data && data.cod === "404") {
-                // console.log(data); 
-                alert(data?.message)
-            }
-
         } catch (e) {
-            console.log(e)
+            console.log(e);
         }
     }
 
