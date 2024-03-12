@@ -28,12 +28,12 @@ const WeatherApp = () => {
             const data = await res.json();
 
             console.log(element[0].value.trim())
-            if (data && data.cod === "404") {
+            if (data && data?.cod === "404") {
                 console.log(data); 
                 alert(data?.message)
             }
 
-            if (data && data.length !== 0 && data?.cod !== "404") {
+            if (data && data?.length !== 0) { //&& data?.cod !== "404"
 
                 const humidity = document.getElementsByClassName('humidity');
                 const windyRate = document.getElementsByClassName('windRate');
